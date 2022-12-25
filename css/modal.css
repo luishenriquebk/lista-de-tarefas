@@ -1,0 +1,107 @@
+/* ROOT */
+:root {
+    --clr-black-primary: #333;
+    --clr-black-secondary: #444;
+    --clr-gray: rgb(165, 165, 165);
+    --clr-shadow: rgba(0, 0, 0, 0.3);
+    --clr-success: rgb(3, 142, 3);
+    --clr-delete: rgb(234, 28, 28);
+    --clr-error: rgb(227, 98, 22);
+    --clr-white: #fff;
+}
+
+/* MODAL */
+.modal-success,
+.modal-delete,
+.modal-error,
+.modal-error-maxTarefas,
+.modal-error-qntCaracteres { 
+    display: none;
+    position: fixed;
+    top: 15px;
+    border-radius: 8px;
+    background-color: var(--clr-white);
+    box-shadow: 5px 5px 15px var(--clr-shadow);
+    animation: modal 2s ease 0s 1 normal forwards;
+}
+
+/* WIDTH */
+.modal-success,
+.modal-delete,
+.modal-error-maxTarefas,
+.modal-error-qntCaracteres  {
+    width: 300px;
+}
+
+.modal-error {
+    width: 195px;
+}
+
+/* BLOCK */
+.block {
+    display: block;
+}
+
+/* CONTENT-MODALS */
+.content-modal-sucess,
+.content-modal-delete,
+.modal-error-maxTarefas,
+.modal-error-qntCaracteres {
+    padding: 20px 10px;
+    justify-content: space-evenly;
+}
+
+.content-modal-error {
+    padding: 20px 10px;
+}
+
+.modal-error-maxTarefas .modal-error-info, 
+.modal-error-qntCaracteres .modal-error-info {
+	font-size: 12px;
+	color: var(--clr-gray);
+}
+/* ICONS */
+.modal-success i {
+    color: var(--clr-success)
+}
+
+.modal-delete i {
+    color: var(--clr-delete);
+    margin-bottom: 2px;
+}
+
+.modal-error i,
+.modal-error-maxTarefas i,
+.modal-error-qntCaracteres i {
+    color: var(--clr-error);
+    margin-right: 10px;
+}
+
+/* KEYFRAMES */
+@keyframes modal {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
